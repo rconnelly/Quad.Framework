@@ -3,6 +3,10 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
+using System.Collections.Generic;
+using FluentMongo.Linq;
+using System.Linq;
+
 using Quad.Dto;
 
 namespace Quad.Data
@@ -42,6 +46,22 @@ namespace Quad.Data
 				MongoCollection<User> users = db.GetCollection<User>("users");
 				//var q = Query.EQ("Id",id);
 				return users.FindOneByIdAs<User>(id);
+			}
+		}
+		
+		public User GetUserByName(string name)
+		{
+			MongoServer server = MongoServer.Create(ConnectionString);
+			MongoDatabase db = server.GetDatabase(DbName);
+			
+			using (server.RequestStart(db)) {				
+				MongoCollection<User> users = db.GetCollection<User>("users");
+				var user = users.AsQueryable().Select(x => new User(){ Name=x.Name, Id=x.Id  })
+                .Where(x => x.Name == name).First();
+				return user;
+                //.QueryDump(Log)
+                //.Select(x => x.Name)
+                //.ToList();
 			}
 		}
 	}

@@ -49,5 +49,9 @@
       <Project>{AE5166CD-76B0-4911-BD80-CED9521F37A1}</Project>
       <Name>Driver</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Lib\fluent-mongo\src\FluentMongo\FluentMongo.csproj">
+      <Project>{95DCEBC8-5DD1-492C-9E0E-559D3B1A99BE}</Project>
+      <Name>FluentMongo</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

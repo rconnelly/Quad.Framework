@@ -1,3 +1,6 @@
 [submodule "Lib/mongo-csharp-driver"]
 	path = Lib/mongo-csharp-driver
 	url = https://github.com/mongodb/mongo-csharp-driver.git
+[submodule "Lib/fluent-mongo"]
+	path = Lib/fluent-mongo
+	url = https://github.com/craiggwilson/fluent-mongo.git
