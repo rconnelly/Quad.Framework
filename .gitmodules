@@ -3,4 +3,4 @@
 	url = https://github.com/mongodb/mongo-csharp-driver.git
 [submodule "Lib/fluent-mongo"]
 	path = Lib/fluent-mongo
-	url = https://github.com/craiggwilson/fluent-mongo.git
+	url = https://github.com/rconnelly/fluent-mongo.git
