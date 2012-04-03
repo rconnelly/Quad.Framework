@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2012-04-03T07:21:31</TestDate>
+      <Status>Failure</Status>
+      <TotalFailures>1</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>0</TotalIgnored>
+      <Time />
+      <Message>Child test failed</Message>
+    </UnitTestResult>
+  </Results>
   <Tests>
     <TestRecord Name="Quad">
       <Results>
         <UnitTestResult>
           <TestDate>2012-04-03T06:01:09</TestDate>
+          <Status>Failure</Status>
+          <TotalFailures>1</TotalFailures>
+          <TotalSuccess>0</TotalSuccess>
+          <TotalIgnored>0</TotalIgnored>
+          <Time />
+          <Message>Child test failed</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2012-04-03T07:21:31</TestDate>
           <Status>Failure</Status>
           <TotalFailures>1</TotalFailures>
           <TotalSuccess>0</TotalSuccess>
@@ -25,12 +45,30 @@
               <Time />
               <Message>Child test failed</Message>
             </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2012-04-03T07:21:31</TestDate>
+              <Status>Failure</Status>
+              <TotalFailures>1</TotalFailures>
+              <TotalSuccess>0</TotalSuccess>
+              <TotalIgnored>0</TotalIgnored>
+              <Time />
+              <Message>Child test failed</Message>
+            </UnitTestResult>
           </Results>
           <Tests>
             <TestRecord Name="Test">
               <Results>
                 <UnitTestResult>
                   <TestDate>2012-04-03T06:01:09</TestDate>
+                  <Status>Failure</Status>
+                  <TotalFailures>1</TotalFailures>
+                  <TotalSuccess>0</TotalSuccess>
+                  <TotalIgnored>0</TotalIgnored>
+                  <Time />
+                  <Message>Child test failed</Message>
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2012-04-03T07:21:31</TestDate>
                   <Status>Failure</Status>
                   <TotalFailures>1</TotalFailures>
                   <TotalSuccess>0</TotalSuccess>
@@ -55,6 +93,119 @@
   at Quad.Tests.Test.TestCase () [0x00000] in /Users/ryanconnelly/Projects/Quad.Framework/Quad.Tests/Test.cs:15 
   at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
   at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                  </Results>
+                  <Tests />
+                </TestRecord>
+                <TestRecord Name="add_user_returns_valid_user_with_id">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-04-03T07:21:31</TestDate>
+                      <Status>Failure</Status>
+                      <TotalFailures>1</TotalFailures>
+                      <TotalSuccess>0</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                      <Message>System.ArgumentException : Format of initialization string does not conform to specifications at index 16.</Message>
+                      <StackTrace>  at System.Data.Common.DbConnectionStringBuilder.ParseConnectionStringNonOdbc (System.String connectionString) [0x00000] in &lt;filename unknown&gt;:0 
+  at System.Data.Common.DbConnectionStringBuilder.ParseConnectionString (System.String connectionString) [0x00000] in &lt;filename unknown&gt;:0 
+  at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString (System.String value) [0x00000] in &lt;filename unknown&gt;:0 
+  at MongoDB.Driver.MongoConnectionStringBuilder..ctor (System.String connectionString) [0x00006] in /Users/ryanconnelly/Projects/Quad.Framework/Lib/mongo-csharp-driver/Driver/Core/MongoConnectionStringBuilder.cs:105 
+  at MongoDB.Driver.MongoServer.Create (System.String connectionString) [0x0001f] in /Users/ryanconnelly/Projects/Quad.Framework/Lib/mongo-csharp-driver/Driver/Core/MongoServer.cs:175 
+  at Quad.Data.DataStore.AddUser (Quad.Dto.User user) [0x00000] in /Users/ryanconnelly/Projects/Quad.Framework/Quad.Data/DataStore.cs:26 
+  at Quad.Tests.Test.add_user_returns_valid_user_with_id () [0x00006] in /Users/ryanconnelly/Projects/Quad.Framework/Quad.Tests/Test.cs:18 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2012-04-03T07:22:11</TestDate>
+                      <Status>Failure</Status>
+                      <TotalFailures>1</TotalFailures>
+                      <TotalSuccess>0</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                      <Message>System.ArgumentException : Format of initialization string does not conform to specifications at index 16.</Message>
+                      <StackTrace>  at System.Data.Common.DbConnectionStringBuilder.ParseConnectionStringNonOdbc (System.String connectionString) [0x00000] in &lt;filename unknown&gt;:0 
+  at System.Data.Common.DbConnectionStringBuilder.ParseConnectionString (System.String connectionString) [0x00000] in &lt;filename unknown&gt;:0 
+  at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString (System.String value) [0x00000] in &lt;filename unknown&gt;:0 
+  at MongoDB.Driver.MongoConnectionStringBuilder..ctor (System.String connectionString) [0x00006] in /Users/ryanconnelly/Projects/Quad.Framework/Lib/mongo-csharp-driver/Driver/Core/MongoConnectionStringBuilder.cs:105 
+  at MongoDB.Driver.MongoServer.Create (System.String connectionString) [0x0001f] in /Users/ryanconnelly/Projects/Quad.Framework/Lib/mongo-csharp-driver/Driver/Core/MongoServer.cs:175 
+  at Quad.Data.DataStore.AddUser (Quad.Dto.User user) [0x00000] in /Users/ryanconnelly/Projects/Quad.Framework/Quad.Data/DataStore.cs:26 
+  at Quad.Tests.Test.add_user_returns_valid_user_with_id () [0x00006] in /Users/ryanconnelly/Projects/Quad.Framework/Quad.Tests/Test.cs:18 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2012-04-03T07:23:15</TestDate>
+                      <Status>Success</Status>
+                      <TotalFailures>0</TotalFailures>
+                      <TotalSuccess>1</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 1.76ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2012-04-03T07:25:54</TestDate>
+                      <Status>Failure</Status>
+                      <TotalFailures>1</TotalFailures>
+                      <TotalSuccess>0</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                      <Message>System.NullReferenceException : Object reference not set to an instance of an object</Message>
+                      <StackTrace>  at Quad.Tests.Test.add_user_returns_valid_user_with_id () [0x0003c] in /Users/ryanconnelly/Projects/Quad.Framework/Quad.Tests/Test.cs:23 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2012-04-03T07:26:06</TestDate>
+                      <Status>Failure</Status>
+                      <TotalFailures>0</TotalFailures>
+                      <TotalSuccess>0</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                      <Message>Connection refused</Message>
+                      <StackTrace>  at Mono.Remoting.Channels.Unix.HostConnectionPool.CreateConnection () [0x00000] in &lt;filename unknown&gt;:0 
+  at Mono.Remoting.Channels.Unix.HostConnectionPool.GetConnection () [0x00000] in &lt;filename unknown&gt;:0 
+  at Mono.Remoting.Channels.Unix.UnixConnectionPool.GetConnection (System.String path) [0x00000] in &lt;filename unknown&gt;:0 
+  at Mono.Remoting.Channels.Unix.UnixClientTransportSink.ProcessMessage (IMessage msg, ITransportHeaders requestHeaders, System.IO.Stream requestStream, ITransportHeaders&amp; responseHeaders, System.IO.Stream&amp; responseStream) [0x00000] in &lt;filename unknown&gt;:0 
+  at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage (IMessage msg) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2012-04-03T07:27:17</TestDate>
+                      <Status>Failure</Status>
+                      <TotalFailures>0</TotalFailures>
+                      <TotalSuccess>0</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                      <Message>Connection refused</Message>
+                      <StackTrace>  at Mono.Remoting.Channels.Unix.HostConnectionPool.CreateConnection () [0x00000] in &lt;filename unknown&gt;:0 
+  at Mono.Remoting.Channels.Unix.HostConnectionPool.GetConnection () [0x00000] in &lt;filename unknown&gt;:0 
+  at Mono.Remoting.Channels.Unix.UnixConnectionPool.GetConnection (System.String path) [0x00000] in &lt;filename unknown&gt;:0 
+  at Mono.Remoting.Channels.Unix.UnixClientTransportSink.ProcessMessage (IMessage msg, ITransportHeaders requestHeaders, System.IO.Stream requestStream, ITransportHeaders&amp; responseHeaders, System.IO.Stream&amp; responseStream) [0x00000] in &lt;filename unknown&gt;:0 
+  at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage (IMessage msg) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2012-04-03T07:30:41</TestDate>
+                      <Status>Success</Status>
+                      <TotalFailures>0</TotalFailures>
+                      <TotalSuccess>1</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.29ms</Message>
                       <ConsoleOutput />
                       <ConsoleError />
                     </UnitTestResult>

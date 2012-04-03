@@ -1,4 +1,7 @@
 using System;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.IdGenerators;
+using MongoDB.Driver;
 
 namespace Quad.Dto
 {
@@ -6,6 +9,8 @@ namespace Quad.Dto
 	{
 		public string Name {get;set;}
 		
+		[BsonId(IdGenerator = typeof(CombGuidGenerator))]
+   		public Guid Id { get; set; }
 		public User ()
 		{
 		}

@@ -37,4 +37,25 @@
     <Compile Include="Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Quad.Data\Quad.Data.csproj">
+      <Project>{1E3F3BE4-655F-4777-A1FE-77CC3E3D8882}</Project>
+      <Name>Quad.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quad.Dto\Quad.Dto.csproj">
+      <Project>{3AFD0CE2-714A-4B7D-AC98-63CFB04B0E8D}</Project>
+      <Name>Quad.Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\mongo-csharp-driver\Bson\Bson.csproj">
+      <Project>{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}</Project>
+      <Name>Bson</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\mongo-csharp-driver\Driver\Driver.csproj">
+      <Project>{AE5166CD-76B0-4911-BD80-CED9521F37A1}</Project>
+      <Name>Driver</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
