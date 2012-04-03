@@ -1,0 +1,91 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Data", "1. Data", "{F94B5862-B673-4DD1-8078-311309FC3565}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quad.Data", "Quad.Data\Quad.Data.csproj", "{1E3F3BE4-655F-4777-A1FE-77CC3E3D8882}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quad.Dto", "Quad.Dto\Quad.Dto.csproj", "{3AFD0CE2-714A-4B7D-AC98-63CFB04B0E8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Store", "0. Store", "{FAA8F314-2386-4AA4-A8EF-7746795BF3F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Tests", "4. Tests", "{BF73628E-8E96-4543-9BBE-E07A16EC5F60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quad.Tests", "Quad.Tests\Quad.Tests.csproj", "{48DBE059-AFD8-4049-A731-B1555D6614C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Third Party", "5. Third Party", "{6B40304E-4E5B-45FE-9A16-EA34BEBD14AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MongoDB", "MongoDB", "{D4659BB0-755F-4EB6-9BD3-E3B7F7C94E2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bson", "Lib\mongo-csharp-driver\Bson\Bson.csproj", "{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driver", "Lib\mongo-csharp-driver\Driver\Driver.csproj", "{AE5166CD-76B0-4911-BD80-CED9521F37A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Default|Any CPU = Default|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E3F3BE4-655F-4777-A1FE-77CC3E3D8882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E3F3BE4-655F-4777-A1FE-77CC3E3D8882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E3F3BE4-655F-4777-A1FE-77CC3E3D8882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E3F3BE4-655F-4777-A1FE-77CC3E3D8882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AFD0CE2-714A-4B7D-AC98-63CFB04B0E8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AFD0CE2-714A-4B7D-AC98-63CFB04B0E8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AFD0CE2-714A-4B7D-AC98-63CFB04B0E8D}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AFD0CE2-714A-4B7D-AC98-63CFB04B0E8D}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{3AFD0CE2-714A-4B7D-AC98-63CFB04B0E8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AFD0CE2-714A-4B7D-AC98-63CFB04B0E8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48DBE059-AFD8-4049-A731-B1555D6614C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48DBE059-AFD8-4049-A731-B1555D6614C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48DBE059-AFD8-4049-A731-B1555D6614C2}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{48DBE059-AFD8-4049-A731-B1555D6614C2}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{48DBE059-AFD8-4049-A731-B1555D6614C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48DBE059-AFD8-4049-A731-B1555D6614C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE5166CD-76B0-4911-BD80-CED9521F37A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE5166CD-76B0-4911-BD80-CED9521F37A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE5166CD-76B0-4911-BD80-CED9521F37A1}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE5166CD-76B0-4911-BD80-CED9521F37A1}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{AE5166CD-76B0-4911-BD80-CED9521F37A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE5166CD-76B0-4911-BD80-CED9521F37A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1E3F3BE4-655F-4777-A1FE-77CC3E3D8882} = {F94B5862-B673-4DD1-8078-311309FC3565}
+		{3AFD0CE2-714A-4B7D-AC98-63CFB04B0E8D} = {F94B5862-B673-4DD1-8078-311309FC3565}
+		{48DBE059-AFD8-4049-A731-B1555D6614C2} = {BF73628E-8E96-4543-9BBE-E07A16EC5F60}
+		{D4659BB0-755F-4EB6-9BD3-E3B7F7C94E2B} = {6B40304E-4E5B-45FE-9A16-EA34BEBD14AC}
+		{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6} = {D4659BB0-755F-4EB6-9BD3-E3B7F7C94E2B}
+		{AE5166CD-76B0-4911-BD80-CED9521F37A1} = {D4659BB0-755F-4EB6-9BD3-E3B7F7C94E2B}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Quad.Tests\Quad.Tests.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedFlat
+		$1.ResourceNamePolicy = MSBuild
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/x-csharp
+		$3.scope = text/x-csharp
+		$0.TextStylePolicy = $4
+		$4.FileWidth = 120
+		$4.TabWidth = 4
+		$4.inheritsSet = Mono
+		$4.inheritsScope = text/plain
+		$4.scope = text/plain
+		$0.StandardHeader = $5
+		$5.Text = @/* \n    Copyright Quad IO, inc 2012\n*/
+		$5.IncludeInNewFiles = True
+	EndGlobalSection
+EndGlobal
