@@ -1,0 +1,1 @@
+bin\mongod --dbpath bin\data\db

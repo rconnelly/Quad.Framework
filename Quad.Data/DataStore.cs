@@ -56,8 +56,7 @@ namespace Quad.Data
 			
 			using (server.RequestStart(db)) {				
 				MongoCollection<User> users = db.GetCollection<User>("users");
-				var user = users.AsQueryable().Select(x => new User(){ Name=x.Name, Id=x.Id  })
-                .Where(x => x.Name == name).First();
+				var user = users.AsQueryable().Select(x => new User(){ Name=x.Name, Id=x.Id  }).First(x => x.Name == name);
 				return user;
                 //.QueryDump(Log)
                 //.Select(x => x.Name)
