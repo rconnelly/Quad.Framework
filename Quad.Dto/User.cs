@@ -5,7 +5,7 @@ using MongoDB.Driver;
 
 namespace Quad.Dto
 {
-	public class User
+	public class User : IDto
 	{
 		
 		[BsonId(IdGenerator = typeof(CombGuidGenerator))]
@@ -16,7 +16,8 @@ namespace Quad.Dto
 		public string FacebookToken { get; set; }
 		public string LinkedInToken { get; set; }
 		public string TwitterToken { get; set; }
-	
+		public string TableName { get{ return "user"; } }
+		
 		public User ()
 		{
 		}

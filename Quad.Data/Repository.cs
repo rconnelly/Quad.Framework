@@ -11,7 +11,6 @@ using Quad.Dto;
 
 namespace Quad.Data
 {
-	
 	public class RepositoryConfiguration
 	{
 		public MongoServer Server {get;set;}
@@ -19,14 +18,6 @@ namespace Quad.Data
 		public string ConnectionString {get;set;}
 	}
 	
-	interface IRespository
-	{
-		User AddUser(User user);
-		User GetUserById(Guid id);
-		SafeModeResult DeleteUser(Guid id);
-		User GetUserByEmail(string email);
-	}
-		
 	public class Repository : IRespository
 	{
 		private string ConnectionString {get;set;}
@@ -45,46 +36,54 @@ namespace Quad.Data
 			Database = Server.GetDatabase(config.DBName);
 		}
 		
-		public User AddUser(User user)
+		public T Add<T>(T dto) where T : IDto 
 		{			
 			using (Server.RequestStart(Database)) 
 			{
-				MongoCollection<User> users = Database.GetCollection<User>("users");
-				users.Insert(user);
-				return users.FindOne();
+				MongoCollection<T> dtos = Database.GetCollection<T>(dto.TableName);
+				dtos.Insert(dto);
+				return dtos.FindOne();
 			}
 		}
 		
-		public User GetUserById(Guid id)
+		public static T CreateInstance<T>()
 		{
-			
+			Type d1 = typeof(T);
+ 			//Type[] typeArgs = { typeof(string) };
+			Type t = d1.MakeGenericType();
+		 	return (T)Activator.CreateInstance(t);
+		}
+		
+		public string GetTableName<T>() where T : IDto
+		{
+			T t = Repository.CreateInstance<T>();
+			string tableName =  t.TableName;
+			return tableName;
+		}
+		
+		public T GetById<T>(Guid id) where T : IDto 
+		{
 			using (Server.RequestStart(Database)) 
 			{				
-				MongoCollection<User> users = Database.GetCollection<User>("users");
-				return users.FindOneByIdAs<User>(id);
+				MongoCollection<T> dtos = Database.GetCollection<T>(GetTableName<T>());
+				return dtos.FindOneByIdAs<T>(id);
 			}
 		}
 
-		public SafeModeResult DeleteUser(Guid id)
+		public SafeModeResult Delete<T>(Guid id) where T : IDto 
 		{
 			using (Server.RequestStart(Database)) 
-			{				
-				MongoCollection<User> users = Database.GetCollection<User>("users");
-				SafeModeResult result = users.Remove(Query.EQ("_id", id));
-				
+			{	
+				MongoCollection<T> dtos = Database.GetCollection<T>(GetTableName<T>());
+				SafeModeResult result = dtos.Remove(Query.EQ("_id", id));
 				return result;
 			}
 		}
 		
-		public User GetUserByEmail(string email)
+		public IQueryable Fetch<T>(MongoDatabase db) where T : IDto
 		{
-			using (Server.RequestStart(Database)) 
-			{
-				MongoCollection<User> users = Database.GetCollection<User>("users");
-				User user = users.AsQueryable().Select(x => new User(){ Email=x.Email, Id=x.Id  })
-					.Where(x => x.Email == email).First();
-				return user;
-			}
+			MongoCollection<T> dtos = db.GetCollection<T>(GetTableName<T>());
+			return dtos.AsQueryable();
 		}
 	}
 }

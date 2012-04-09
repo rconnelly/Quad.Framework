@@ -19,19 +19,19 @@ namespace Quad.Tests
 			var server = MongoDB.Driver.MongoServer.Create (connectionString);
 			var dStore = new Repository (new RepositoryConfiguration () {DBName = dbName,
 								ConnectionString=connectionString,Server = server});
-			var user = dStore.AddUser (new User () { Email="test@test.com" });
+			var user = dStore.Add(new User () { Email="test@test.com" });
 			Assert.IsNotNull (user.Id);
 			
-			var newUser = dStore.GetUserById (user.Id);
+			var newUser = dStore.GetById<User>(user.Id);
 			
 			Assert.IsNotNull (user);
 			
 			Assert.AreEqual (user.Email, newUser.Email);
 			Assert.AreEqual (user.Id, newUser.Id);
 			
-			dStore.DeleteUser (user.Id);
+			dStore.Delete<User>(user.Id);
 			
-			Assert.IsNull (dStore.GetUserById (user.Id));
+			Assert.IsNull (dStore.GetById<User>(user.Id));
 		}
 	}
 }
