@@ -7,10 +7,16 @@ namespace Quad.Dto
 {
 	public class User
 	{
-		public string Name {get;set;}
 		
 		[BsonId(IdGenerator = typeof(CombGuidGenerator))]
    		public Guid Id { get; set; }
+		
+		public string Email { get; set; }
+		public string Password { get; set; }
+		public string FacebookToken { get; set; }
+		public string LinkedInToken { get; set; }
+		public string TwitterToken { get; set; }
+	
 		public User ()
 		{
 		}

@@ -1,19 +1,22 @@
 ﻿<Properties>
   <AuthorInfo Name="Ryan Connelly" Email="ryan@quad.io" Copyright="Quad IO, inc 2012" Company="Quad IO, inc" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Quad.Tests/Test.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Lib/service-stack/src/ServiceStack/CacheAccess.Providers/BasicPersistenceProviderCacheBase.cs">
     <Files>
-      <File FileName="Quad.Tests/Test.cs" Line="14" Column="4" />
-      <File FileName="Quad.Dto/User.cs" Line="11" Column="4" />
+      <File FileName="Lib/service-stack/src/ServiceStack/CacheAccess.Providers/BasicPersistenceProviderCacheBase.cs" Line="5" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Option id="ShowVersionControlOverlays" value="True" />
           <Option id="ShowAllFiles" value="False" />
-          <Node name="5. Third Party" expanded="True">
-            <Node name="MongoDB" expanded="True" selected="True" />
+          <Node name="1. Data" expanded="True">
+            <Node name="Quad.Dto" expanded="True" />
           </Node>
+          <Node name="4. Tests" expanded="True">
+            <Node name="Quad.Tests" expanded="True" />
+          </Node>
+          <Node name="5. Third Party" expanded="True" selected="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
@@ -31,7 +34,9 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/ryanconnelly/Projects/Quad.Framework/Quad.Tests/Test.cs" line="17" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
