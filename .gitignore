@@ -1,4 +1,4 @@
 *.pidb
 *.suo
-bin/Debug
+bin/
 test-results
